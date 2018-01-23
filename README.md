@@ -14,7 +14,7 @@ Features:
 * Reset or delete counters
 
 Find source code on GitHub!
-https://github.com/Blunderchips/Counter-Plus-Plus
+https://github.com/Blunderchips/CounterApp
 
 https://www.youtube.com/watch?v=GHKdlGE1SSs
 
