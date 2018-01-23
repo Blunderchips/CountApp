@@ -2,11 +2,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainActivity"
+    android:id="@+id/view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="dot.empire.counter.MainActivity"
+    tools:context="dot.empire.counter.activities.ActivityMain"
     tools:showIn="@layout/activity_main">
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -30,20 +30,20 @@
     <com.vj.widgets.AutoResizeTextView
         android:id="@+id/txtOutput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:ellipsize="none"
         android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
         android:singleLine="true"
-        android:text="0"
-        android:textSize="75sp"
+        android:text="test"
+        android:textSize="120sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adView" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -59,24 +59,40 @@
 
         <ImageButton
             android:id="@+id/btnAction"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:contentDescription=""
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_add_black_24dp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnList"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_hamburger_menu" />
+            android:contentDescription=""
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_menu_black_24dp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btnSettings"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_cog" />
+            android:contentDescription=""
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_settings_black_24dp" />
 
     </LinearLayout>
 
