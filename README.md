@@ -18,6 +18,8 @@ https://github.com/Blunderchips/CounterApp
 
 https://www.youtube.com/watch?v=GHKdlGE1SSs
 
+## https://play.google.com/store/apps/details?id=dot.empire.counter
+
 MIT License
 
 Copyright (c) 2018 Matthew 'siD' Van der Bijl
