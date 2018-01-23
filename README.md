@@ -9,7 +9,7 @@ The Best single digit counting app on the Play Store!
 Features:
  
 * Count up & down
-* Fully customisablecolour pallet 
+* Fully customisable colour pallet 
 * Have multiple counters
 * Reset or delete counters
 
