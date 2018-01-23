@@ -1,4 +1,4 @@
-# CounterApp - Android Counting App
+# CountApp - Android Counting App
 ### The best single digit counting app on the Play Store!
 
 CountApp is a revolutionary new app that allows users to count up, and down, by one with a single press! I know, amazing right!
