@@ -110,7 +110,7 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
             case "About":
                 startActivity(new Intent(this, ActivityAbout.class));
                 return;
-            case "Primary Colour":
+            case "Button Colour":
                 this.setButtonColour();
                 return;
             case "Background Colour":
