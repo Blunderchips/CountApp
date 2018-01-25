@@ -1,0 +1,210 @@
+commit 7d639a778730cbcad159f99adf3bd431833b5184
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Thu Jan 25 17:19:28 2018 +0200
+
+    Major update
+    
+    3rd release
+    updated javadoc
+    ad support added
+    firebaes analytics added to eaach activity
+    commented code
+    
+    Signed-off-by: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+
+commit 505e61268f1accf3e952f2cb505b3a5c284f778b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 22:00:57 2018 +0200
+
+    Admob bug fix
+
+commit ab96634dca71e141f5a1b4c59992aded243a5b4c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 14:44:51 2018 +0200
+
+    Hotfix
+
+commit 83b76321c862d0e41ca790446c93383a18056ba9
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 12:05:57 2018 +0200
+
+    Minor Update
+    
+    Created package for all video resources
+
+commit 03439a824974f59b74bfc25875b429d9b3d7f54a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 11:56:56 2018 +0200
+
+    Update readme.txt
+    
+    Shrunk url to https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
+commit 224581aa5a17129b7ad494a83345eab48557ae2f
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 11:48:24 2018 +0200
+
+    Generated javadoc
+
+commit 8b8c51d678eaeac196f5c0eca08b0858a4457ff7
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 11:46:16 2018 +0200
+
+    Cleaned code
+
+commit 81e11ec0aa65400a3611b0035b4505ad548e688c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 00:10:05 2018 +0200
+
+    Update README.md
+    
+    Added Play Store link
+    https://play.google.com/store/apps/details?id=dot.empire.counter
+
+commit 7d5a6718183c5c44c2bb5b941f50f47c1ca33723
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 00:08:23 2018 +0200
+
+    Add files via upload
+    
+    Uploaded rating certificate
+
+commit 1e9dcbf65a34026d2ea7ac84a6042de45ecb7341
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Wed Jan 24 00:07:55 2018 +0200
+
+    Update README.md
+    
+    Renamed to CountApp
+
+commit e54cc0492ed0981bdae02e8878cc185e8c20298a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:57:25 2018 +0200
+
+    Add files via upload
+    
+    YouTube enhanced version
+
+commit 85ed96d3e786f23e9d2a85df6648a69a329ca42a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:56:43 2018 +0200
+
+    Delete CountApp Long Screenshot.mp4
+    
+    Replacing with YouTube version
+
+commit f59a8403dbb00c744b9f5c66bc0baf4898db9f50
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:54:11 2018 +0200
+
+    2nd Release
+
+commit 92a9c5b3a8090faecb89b0489ccf2a7f27dd616a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:53:41 2018 +0200
+
+    Update README.md
+    
+    Fix spelling error
+
+commit 308ba2b731c146ec19d32f237b6828107e6d9aec
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:50:08 2018 +0200
+
+    Update README.md
+    
+    Hotfix
+
+commit c950cee318f5a21a2b275fe4088c5465d6760c7b
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:48:51 2018 +0200
+
+    Update README.md
+    
+    Major update to main readme
+
+commit 41e2709753ae5ddda611e16f26a4f676e07ee4af
+Merge: ccb4dbb ecd174e
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:44:09 2018 +0200
+
+    Merge branch 'master' of https://github.com/Blunderchips/Counter-Plus-Plus
+
+commit ccb4dbb3c4cdc1f2aca2449b7cf52b692014f275
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:43:31 2018 +0200
+
+    Implemented new icon
+
+commit b23fe92341a111298a90e44a5ea93ae834971cdc
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:26:49 2018 +0200
+
+    Minor update
+
+commit ecd174e4224157480df946070c7aeab301e1035d
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:26:49 2018 +0200
+
+    First release
+
+commit 5b7f3979d13812e5335fe616eeb6d19b57b99ab5
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:19:28 2018 +0200
+
+    Created title screens
+
+commit b2245d2af0134720444ea00a1ba41bf6ac34f2b3
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 23:08:32 2018 +0200
+
+    Added screenshots
+
+commit 5b750de4623d71da3ffac9b72fcdeeb31c4b84d2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 22:55:56 2018 +0200
+
+    Removed resources folder
+
+commit 2b66e0f4773411e0eb0f036804b80e28030cde6a
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 22:55:20 2018 +0200
+
+    Almost done
+
+commit 6c75586ac729399465c7bf231f89100d4f75abc9
+Merge: 31c2ba8 cc87b2d
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 13:32:42 2018 +0200
+
+    Merge branch 'master' of https://github.com/Blunderchips/Counter-Plus-Plus
+
+commit 31c2ba8ca20ace385f62b8a037e008cbc57d3c74
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 13:32:31 2018 +0200
+
+    Working prototype
+
+commit 2bd3c11fb2a5bbccfe4a7df027596732d62a370c
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 12:46:16 2018 +0200
+
+    Got some images for buttons (http://game-icons.net/)
+
+commit f6e006ca79e1686de6155f9e8dbb4a16dda278ae
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 12:33:11 2018 +0200
+
+    Created Android Studio project
+
+commit cc87b2d9be7fd368d09fa9de1355becaf52eaad2
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 12:34:30 2018 +0200
+
+    Update README.md
+
+commit 3f36571c9b924a1105a7a16446217513f2f1c6a1
+Author: Matthew 'siD' Van der Bijl <matthewvdbijl@gmail.com>
+Date:   Tue Jan 23 12:31:24 2018 +0200
+
+    Initial commit
