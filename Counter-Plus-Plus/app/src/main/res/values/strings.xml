@@ -8,7 +8,8 @@
     <string name="action_reset_all">Reset All Counters</string>
     <string name="action_delete_all">Delete All Counters</string>
 
-    <string name="adUnitID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="AdMobAppID">ca-app-pub-7186830154970754~6108865556</string>
+    <string name="adUnitID">ca-app-pub-7186830154970754/1975670119</string>
 
     <string name="title_activity_list">Counters</string>
     <string name="title_activity_settings">Settings</string>

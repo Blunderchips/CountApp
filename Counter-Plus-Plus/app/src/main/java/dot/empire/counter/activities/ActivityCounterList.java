@@ -15,6 +15,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,8 +39,14 @@ import static dot.empire.counter.Preferences.BUTTON_COLOUR;
 public final class ActivityCounterList extends AppCompatActivity implements AdapterView.OnItemClickListener,
         View.OnClickListener {
 
+    /**
+     * List of all active counters.
+     */
     private final ArrayList<String> list;
 
+    /**
+     * Default constructor. Used to init list <code>ArrayList</code>.
+     */
     public ActivityCounterList() {
         this.list = new ArrayList<String>();
     }
@@ -49,7 +58,10 @@ public final class ActivityCounterList extends AppCompatActivity implements Adap
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        findViewById(R.id.view).setBackgroundColor(Util.PREFERENCES.getInteger(BG_COLOUR.name(), 0xFFFFFF));
+        int bgColour = Util.PREFERENCES.getInteger(BG_COLOUR.name(), -1);
+        if (bgColour != -1) {
+            findViewById(R.id.view).setBackgroundColor(bgColour);
+        }
 
         ListView listView = (ListView) findViewById(R.id.listView);
         for (Counter cnt : Util.COUNTERS) {
@@ -65,6 +77,14 @@ public final class ActivityCounterList extends AppCompatActivity implements Adap
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(this);
         fab.setBackgroundColor(Util.PREFERENCES.getInteger(BUTTON_COLOUR.name(), 0xFF4081));
+
+        try {
+            FirebaseAnalytics analytics = FirebaseAnalytics.getInstance(this);
+            analytics.setAnalyticsCollectionEnabled(true);
+        } catch (Exception ex) {
+            Log.e("Analytics error", ex.getClass().getSimpleName(), ex);
+            Toast.makeText(this, ex.getLocalizedMessage().toLowerCase(), Toast.LENGTH_LONG).show();
+        }
     }
 
     /**

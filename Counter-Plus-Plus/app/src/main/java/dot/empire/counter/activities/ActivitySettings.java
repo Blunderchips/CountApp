@@ -17,6 +17,7 @@ import com.flask.colorpicker.ColorPickerView;
 import com.flask.colorpicker.OnColorSelectedListener;
 import com.flask.colorpicker.builder.ColorPickerClickListener;
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 
@@ -34,10 +35,17 @@ import static dot.empire.counter.Preferences.TEXT_COLOUR;
  *
  * @author Matthew Van der Bijl
  */
-public final class ActivitySettings extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public final class ActivitySettings extends AppCompatActivity implements
+        AdapterView.OnItemClickListener {
 
+    /**
+     * List of all options.
+     */
     private final ArrayList<SettingOption> list;
 
+    /**
+     * Default constructor. Used to init list <code>ArrayList</code>.
+     */
     public ActivitySettings() {
         this.list = new ArrayList<SettingOption>();
     }
@@ -49,7 +57,10 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        findViewById(R.id.view).setBackgroundColor(Util.PREFERENCES.getInteger(BG_COLOUR.name(), 0xFFFFFF));
+        int bgColour = Util.PREFERENCES.getInteger(BG_COLOUR.name(), -1);
+        if (bgColour != -1) {
+            findViewById(R.id.view).setBackgroundColor(bgColour);
+        }
 
         {
             this.list.add(new SettingOption("Button Colour", getDrawable(R.drawable.ic_color_lens_black_24dp)));
@@ -72,6 +83,14 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
         SettingsListAdapter adapter = new SettingsListAdapter(this, list);
         listView.setOnItemClickListener(this);
         listView.setAdapter(adapter);
+
+        try {
+            FirebaseAnalytics analytics = FirebaseAnalytics.getInstance(this);
+            analytics.setAnalyticsCollectionEnabled(true);
+        } catch (Exception ex) {
+            Log.e("Error creating ad", ex.getClass().getSimpleName(), ex);
+            Toast.makeText(this, ex.getLocalizedMessage().toLowerCase(), Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
@@ -99,10 +118,10 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
                 resetColours();
                 break;
             case "Reset All":
-                Util.resetAll(this);
+                Util.resetAllCounters(this);
                 break;
             case "Delete All":
-                Util.deleteAll(this);
+                Util.deleteAllCounters(this);
                 break;
             case "Share":
                 Util.share(this);
@@ -125,6 +144,9 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
         }
     }
 
+    /**
+     * Resets the background, text and button colour to their defaults.
+     */
     private void resetColours() {
         Util.PREFERENCES.remove(BUTTON_COLOUR.name());
         Util.PREFERENCES.remove(TEXT_COLOUR.name());
@@ -132,7 +154,7 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
         Util.PREFERENCES.flush();
 
         Toast.makeText(this, "Colours reset", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, ActivitySettings.class));
+        startActivity(new Intent(this, ActivitySettings.class)); // restart activity to update
     }
 
 
@@ -148,6 +170,9 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Used to choose and set the button colour of the app.
+     */
     private void setButtonColour() {
         ColorPickerDialogBuilder
                 .with(this)
@@ -180,6 +205,9 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
                 }).build().show();
     }
 
+    /**
+     * Used to choose and set the background colour of the app.
+     */
     private void setBackgroundColour() {
         ColorPickerDialogBuilder
                 .with(this)
@@ -214,6 +242,9 @@ public final class ActivitySettings extends AppCompatActivity implements Adapter
                 }).build().show();
     }
 
+    /**
+     * Used to choose and set the text colour of the app.
+     */
     private void setTextColour() {
         ColorPickerDialogBuilder
                 .with(this)

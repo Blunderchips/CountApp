@@ -11,15 +11,23 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TODO"
+        android:layout_marginTop="4dp"
+        android:text="CountApp is a revolutionary new app that allows users to count up, and down, by one with a single press! I know, amazing right! \n
+CountApp The Best single digit counting app on the Play Store!\n
+Features: \n
+* Count up and down \n
+* Fully customisablecolour pallet \n
+* Have multiple counters \n
+* Reset or delete counters \n
+\n
+Find source code on GitHub! \n
+https://github.com/Blunderchips/CounterApp \n
+
+https://www.youtube.com/watch?v=GHKdlGE1SSs"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

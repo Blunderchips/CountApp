@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.badlogic.gdx.backends.android.AndroidPreferences;
 import com.google.gson.Gson;
 
-import java.security.SecureRandom;
 import java.util.ArrayList;
 
 import dot.empire.counter.activities.ActivityAbout;
@@ -24,12 +23,11 @@ import dot.empire.counter.activities.ActivitySettings;
 public final class Util {
 
     /**
-     *
+     * List of all active counters.
      */
-    public static final SecureRandom T_RNG = new SecureRandom();
     public static ArrayList<Counter> COUNTERS = new ArrayList<>();
     /**
-     *
+     * Used to store user data.
      */
     public static AndroidPreferences PREFERENCES;
 
@@ -49,6 +47,9 @@ public final class Util {
         return null;
     }
 
+    /**
+     * Saves all active counters.
+     */
     public static void saveCounters() {
         Counter[] arr = new Counter[COUNTERS.size()];
 
@@ -63,6 +64,9 @@ public final class Util {
         Log.i("Saved json", json);
     }
 
+    /**
+     * @param name the counter to be deleted
+     */
     public static void deleteCounter(String name) {
         for (int i = 0; i < COUNTERS.size(); i++) {
             if (COUNTERS.get(i).getName().equals(name)) {
@@ -88,7 +92,7 @@ public final class Util {
     }
 
     public static void share(Context context) {
-        final String url = "";
+        final String url = "https://play.google.com/store/apps/details?id=dot.empire.counter"; // Play Store url
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
@@ -100,10 +104,10 @@ public final class Util {
     public static void mainMenu(Context context, MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_delete_all:
-                Util.deleteAll(context);
+                Util.deleteAllCounters(context);
                 break;
             case R.id.action_reset_all:
-                Util.resetAll(context);
+                Util.resetAllCounters(context);
                 break;
             case R.id.action_share:
                 Util.share(context);
@@ -120,14 +124,14 @@ public final class Util {
         }
     }
 
-    public static void deleteAll(Context context) {
+    public static void deleteAllCounters(Context context) {
         COUNTERS.clear();
         saveCounters();
 
         Toast.makeText(context, "Done", Toast.LENGTH_SHORT).show();
     }
 
-    public static void resetAll(Context context) {
+    public static void resetAllCounters(Context context) {
         for (Counter cnt : COUNTERS) {
             cnt.setValue(0l);
         }

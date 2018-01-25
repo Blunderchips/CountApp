@@ -18,6 +18,7 @@ import com.badlogic.gdx.backends.android.AndroidPreferences;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -41,13 +42,28 @@ import static dot.empire.counter.Preferences.TEXT_COLOUR;
 public final class ActivityMain extends AppCompatActivity implements View.OnClickListener,
         View.OnTouchListener {
 
+    /**
+     * Target counter.
+     */
     public static String target;
 
+    /**
+     * Active counter.
+     */
     private Counter counter;
     private AdView adView;
+    /**
+     * Displays value of current counter.
+     */
     private TextView txtOutput;
+    /**
+     * Add or subtract from counter.
+     */
     private boolean flag;
 
+    /**
+     * Default constructor.
+     */
     public ActivityMain() {
         super();
     }
@@ -141,10 +157,10 @@ public final class ActivityMain extends AppCompatActivity implements View.OnClic
         // --
 
         try {
-//            FirebaseAnalytics analytics = FirebaseAnalytics.getInstance(this);
-//            analytics.setAnalyticsCollectionEnabled(true);
+            FirebaseAnalytics analytics = FirebaseAnalytics.getInstance(this);
+            analytics.setAnalyticsCollectionEnabled(true);
 
-            MobileAds.initialize(this, getResources().getString(R.string.adUnitID));
+            MobileAds.initialize(this, getResources().getString(R.string.AdMobAppID));
 
             this.adView = (AdView) findViewById(R.id.adView);
 

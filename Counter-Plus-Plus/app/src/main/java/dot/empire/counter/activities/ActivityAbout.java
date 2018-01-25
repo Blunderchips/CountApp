@@ -5,9 +5,13 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import dot.empire.counter.R;
 import dot.empire.counter.Util;
@@ -16,11 +20,19 @@ import static dot.empire.counter.Preferences.BG_COLOUR;
 import static dot.empire.counter.Preferences.BUTTON_COLOUR;
 
 /**
- * About Activity. Created by Matthew Van der Bijl on 23 Jan 2018.
+ * About Activity. The app can be shared from this activity. Created by Matthew Van der Bijl on 23
+ * Jan 2018.
  *
  * @author Matthew Van der Bijl
  */
 public final class ActivityAbout extends AppCompatActivity implements View.OnClickListener {
+
+    /**
+     * Default constructor.
+     */
+    public ActivityAbout() {
+        super();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +52,14 @@ public final class ActivityAbout extends AppCompatActivity implements View.OnCli
         int btnColour = Util.PREFERENCES.getInteger(BUTTON_COLOUR.name(), -1);
         if (btnColour != -1) {
             fab.setBackgroundColor(btnColour);
+        }
+
+        try {
+            FirebaseAnalytics analytics = FirebaseAnalytics.getInstance(this);
+            analytics.setAnalyticsCollectionEnabled(true);
+        } catch (Exception ex) {
+            Log.e("Analytics error", ex.getClass().getSimpleName(), ex);
+            Toast.makeText(this, ex.getLocalizedMessage().toLowerCase(), Toast.LENGTH_LONG).show();
         }
     }
 
